@@ -3,9 +3,9 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
+  base: "/gastro-mapping/", // Nastavte správne meno repozitára
   build: {
-    outDir: "dist", // Build sa uloží do dist/ namiesto build/
+    outDir: "dist",
   },
-  base: "./", // Dôležité pre GitHub Pages
 });
 
