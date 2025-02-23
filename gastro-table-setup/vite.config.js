@@ -4,11 +4,8 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   plugins: [react()],
   build: {
-    outDir: "dist",
-    rollupOptions: {
-      input: "index.html",
-    },
+    outDir: "dist", // Build sa uloží do dist/ namiesto build/
   },
-  base: "./",
+  base: "./", // Dôležité pre GitHub Pages
 });
 
