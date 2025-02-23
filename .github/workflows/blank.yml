@@ -28,10 +28,13 @@ jobs:
         working-directory: gastro-table-setup
         run: npm run build
 
+      - name: Remove old deployment folder
+        run: rm -rf github-pages-deploy-action-temp-deployment-folder
+
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
+          token: ${{ secrets.GITHUB_TOKEN }}
           branch: gh-pages
-          folder: gastro-table-setup/dist # Opravená cesta, aby nasadzoval dist/ namiesto build/
+          folder: gastro-table-setup/dist
           clean: true
-
