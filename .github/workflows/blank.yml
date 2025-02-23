@@ -19,18 +19,18 @@ jobs:
           node-version: 18
 
       - name: Change to correct directory
-        run: cd gastro-video-mapping/gastro-table-setup && ls -la
+        run: cd gastro-table-setup && ls -la
 
       - name: Install dependencies
-        working-directory: gastro-video-mapping/gastro-table-setup
+        working-directory: gastro-table-setup
         run: npm install
 
       - name: Build React app
-        working-directory: gastro-video-mapping/gastro-table-setup
+        working-directory: gastro-table-setup
         run: npm run build
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
-          folder: gastro-video-mapping/gastro-table-setup/build
+          folder: gastro-table-setup/build
