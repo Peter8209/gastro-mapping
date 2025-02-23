@@ -38,3 +38,4 @@ jobs:
           branch: gh-pages
           folder: gastro-table-setup/dist
           clean: true
+
